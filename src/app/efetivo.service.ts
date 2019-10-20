@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class EfetivoService {
 
-  private readonly URL_SALVA_EVENTO = `${environment.apiUrl}/eventos-astic`;
+  private readonly URL_SALVA_EFETIVO = `${environment.apiUrl}/eventos-astic`;
   private readonly URL_BUSCA_TODOS = `${environment.apiUrl}/eventos-astic`;
 
   constructor(private http: HttpClient) {}
@@ -15,8 +15,8 @@ export class EfetivoService {
                   .toPromise();
   }
 
-  salvaEvento(evento: any): Promise<any> {
-    return this.http.post(this.URL_SALVA_EVENTO, evento)
+  salvaEfetivo(efetivo: any): Promise<any> {
+    return this.http.post(this.URL_SALVA_EFETIVO, efetivo)
                   .toPromise();
   }
 
