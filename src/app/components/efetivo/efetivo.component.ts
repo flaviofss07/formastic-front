@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EfetivoService } from 'efetivo.service';
+import { EfetivoService } from './../../efetivo.service';
 import { NgForm } from '@angular/forms';
 
 class Efetivo {
