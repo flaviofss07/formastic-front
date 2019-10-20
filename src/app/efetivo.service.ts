@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable()
-export class ContatoService {
+export class EfetivoService {
 
   private readonly URL_SALVA_EVENTO = `${environment.apiUrl}/eventos-astic`;
   private readonly URL_BUSCA_TODOS = `${environment.apiUrl}/eventos-astic`;
