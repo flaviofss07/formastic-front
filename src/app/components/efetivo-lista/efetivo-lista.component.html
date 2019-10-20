@@ -26,13 +26,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr *ngFor="let efetivo of efetivos">
+                            <td>{{efetivo.id}}</td>
+                            <td>{{efetivo.nome}}</td>
+                            <td>{{efetivo.fone}}</td>
                             <td>
                                 <button type="button" style="color: white" class="btn btn-success btn-sm"
-                                    (onclick)="editar(contato.id)">
+                                    (onclick)="editar(efetivo.id)">
                                     <i class="fas fa-pencil-alt"></i>
                                 </button>
                                 <button type="button" style="color: white" class="btn btn-danger btn-sm">

@@ -3,15 +3,16 @@
         <h3 class="card-title">Cadastro do Efetivo da ASTIC</h3>
     </div>
     <!-- form start -->
-    <form role="form">
+    <form role="form" autocomplete="off" #efetivoForm="ngForm" (submit)="salvar(efetivoForm)">
+        <input type="hidden" name="id" #inputId="ngModel" [(ngModel)]="efetivo.id">
         <div class="card-body">
             <div class="form-group">
                 <label for="nome">Nome</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome completo">
+                <input type="text" class="form-control" id="nome" name="nome" #inputNome="ngModel" [(ngModel)]="efetivo.nome" autofocus placeholder="Nome completo">
             </div>
             <div class="form-group">
                 <label for="fone">Fone</label>
-                <input type="text" class="form-control" id="fone" placeholder="Fone">
+                <input type="text" class="form-control" id="fone" #inputFone="ngModel" [(ngModel)]="efetivo.fone" placeholder="Fone">
             </div>
         </div>
         <div class="card-footer">
