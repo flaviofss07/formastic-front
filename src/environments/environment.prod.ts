@@ -1,4 +1,4 @@
 export const environment = {
-  production: true,
-  apiUrl: 'https://formastic-api.herokuapp.com/'
+  production: false,
+  apiUrl: 'http://localhost:4200/'
 };

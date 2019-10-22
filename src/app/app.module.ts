@@ -26,9 +26,10 @@ import { routes } from './app.routes';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    routes
+    routes    
   ],
   providers: [],
   bootstrap: [AppComponent]

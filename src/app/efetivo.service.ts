@@ -5,18 +5,17 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class EfetivoService {
 
-  private readonly URL_SALVA_EFETIVO = `${environment.apiUrl}/efetivos-astic`;
-  private readonly URL_BUSCA_TODOS = `${environment.apiUrl}/efetivos-astic`;
-
   constructor(private http: HttpClient) {}
-
+ 
+  private readonly URL_EFETIVO = `${environment.apiUrl}/efetivos-astic`;
+  
   buscaTodos(): Promise<any> {
-    return this.http.get(this.URL_BUSCA_TODOS)
+    return this.http.get(this.URL_EFETIVO)
                   .toPromise();
   }
 
   salvaEfetivo(efetivo: any): Promise<any> {
-    return this.http.post(this.URL_SALVA_EFETIVO, efetivo)
+    return this.http.post(this.URL_EFETIVO, efetivo)
                   .toPromise();
   }
 
